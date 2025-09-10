@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elvaria - Premium Natural Products | Trusted by 10k+ Households</title>
+    <meta name="description" content="Discover Elvaria's premium natural products. Eco-friendly, organic, and safe for your family. Money-back guarantee. Shop now!">
+    
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Elvaria - Premium Natural Products">
+    <meta property="og:description" content="Eco-friendly, organic, and safe products trusted by 10k+ households">
+    <meta property="og:image" content="https://imgur.com/a/4Z6GeQe">
+    <meta property="og:url" content="https://elvaria.shop">
+    <meta property="og:type" content="website">
+    
+    <!-- Language alternatives -->
+    <link rel="alternate" hreflang="ka" href="https://elvaria.shop/">
+    <link rel="alternate" hreflang="en" href="https://elvaria.shop/en/">
+    <link rel="alternate" hreflang="ru" href="https://elvaria.shop/ru/">
+    <link rel="alternate" hreflang="x-default" href="https://elvaria.shop/">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Elvaria Premium Natural Multi-Purpose Cleaner",
+      "description": "Eco-friendly, organic, and safe product for households. Plant-based formula that cuts through grease and grime effectively.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Elvaria"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "29.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "10000"
+      }
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --background: hsl(0, 0%, 92%);
+            --foreground: hsl(220, 9%, 9%);
+            --card: hsl(0, 0%, 100%);
+            --card-foreground: hsl(220, 9%, 9%);
+            --primary: hsl(22, 85%, 54%);
+            --primary-foreground: hsl(0, 0%, 100%);
+            --secondary: hsl(194, 88%, 45%);
+            --secondary-foreground: hsl(0, 0%, 100%);
+            --muted: hsl(220, 14%, 96%);
+            --muted-foreground: hsl(220, 9%, 46%);
+            --accent: hsl(34, 89%, 59%);
+            --accent-foreground: hsl(0, 0%, 100%);
+            --border: hsl(220, 13%, 91%);
+            --ring: hsl(22, 85%, 54%);
+            --font-sans: "Inter", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --radius: 0.75rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            padding: 1rem 0;
+        }
+
+        .navbar.scrolled {
+            background: rgba(235, 235, 235, 0.3);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(220, 220, 220, 0.2);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--foreground);
+        }
+
+        .logo img {
+            height: 3rem;
+            margin-right: 0.75rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--foreground);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .language-selector {
+            position: relative;
+        }
+
+        .lang-button {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-top: 0.5rem;
+            min-width: 150px;
+            display: none;
+        }
+
+        .lang-dropdown.show {
+            display: block;
+        }
+
+        .lang-option {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .lang-option:hover {
+            background: var(--muted);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-top: none;
+        }
+
+        .mobile-menu.show {
+            display: flex;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--foreground);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 5rem;
+            background: linear-gradient(135deg, var(--background) 0%, var(--muted) 100%);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: var(--muted-foreground);
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            color: var(--secondary-foreground);
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background: var(--card);
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .about-header p {
+            font-size: 1.25rem;
+            color: var(--muted-foreground);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .feature-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .feature-icon.eco {
+            background: rgba(34, 197, 94, 0.1);
+            color: rgb(34, 197, 94);
+        }
+
+        .feature-icon.safe {
+            background: rgba(59, 130, 246, 0.1);
+            color: rgb(59, 130, 246);
+        }
+
+        .feature-icon.organic {
+            background: rgba(245, 158, 11, 0.1);
+            color: rgb(245, 158, 11);
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Product Section */
+        .product {
+            padding: 5rem 0;
+            background: var(--background);
+        }
+
+        .product-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .product-image img {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-details h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .checkmark {
+            color: var(--primary);
+            font-weight: bold;
+            margin-top: 0.2rem;
+        }
+
+        .usage-steps {
+            margin-bottom: 2rem;
+        }
+
+        .usage-steps h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .step-number {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .pricing {
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+        }
+
+        .price-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .current-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .original-price {
+            font-size: 1.25rem;
+            color: var(--muted-foreground);
+            text-decoration: line-through;
+        }
+
+        .discount-badge {
+            background: var(--accent);
+            color: var(--accent-foreground);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius);
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .product-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .shipping-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: var(--muted-foreground);
+            font-size: 0.875rem;
+        }
+
+        /* Social Proof Section */
+        .social-proof {
+            padding: 5rem 0;
+            background: var(--card);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .stat {
+            padding: 1rem;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonials-section {
+            margin-bottom: 4rem;
+        }
+
+        .testimonials-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: var(--background);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .stars {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+        }
+
+        .trust-badges {
+            text-align: center;
+        }
+
+        .trust-badges h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .badges {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .badge {
+            background: var(--background);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        .badge-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.25rem;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 5rem 0;
+            background: var(--background);
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .overlay-button {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .overlay-button:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: var(--card);
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contact-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-form {
+            background: var(--background);
+            padding: 2rem;
+            border-radius: var(--radius);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-family: inherit;
+            background: var(--card);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-icon.email {
+            background: rgba(239, 119, 34, 0.1);
+            color: var(--primary);
+        }
+
+        .contact-icon.phone {
+            background: rgba(11, 166, 223, 0.1);
+            color: var(--secondary);
+        }
+
+        .contact-icon.hours {
+            background: rgba(250, 165, 51, 0.1);
+            color: var(--accent);
+        }
+
+        .social-links {
+            margin-top: 2rem;
+        }
+
+        .social-links h4 {
+            margin-bottom: 1rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--primary);
+            color: var(--primary-foreground);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--foreground);
+            color: var(--background);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-brand img {
+            height: 2.5rem;
+            margin-right: 0.75rem;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-brand span {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .footer-section h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(235, 235, 235, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(235, 235, 235, 0.2);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(235, 235, 235, 0.7);
+            font-size: 0.875rem;
+        }
+
+        /* Cookie Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            padding: 1rem;
+            z-index: 1000;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .cookie-banner.show {
+            transform: translateY(0);
+        }
+
+        .cookie-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .cookie-text {
+            flex: 1;
+            font-size: 0.875rem;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--foreground);
+            padding: 0.5rem 1rem;
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(0, 0, 0, 0.95);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .lightbox.show {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 80vh;
+        }
+
+        .lightbox img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: var(--radius);
+        }
+
+        .lightbox-btn {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            border-radius: var(--radius);
+            padding: 0.75rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .lightbox-close {
+            top: 1rem;
+            right: 1rem;
+        }
+
+        .lightbox-prev {
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .lightbox-next {
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .lightbox-counter {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-content,
+            .product-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .features,
+            .testimonials,
+            .badges {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Accessibility */
+        *:focus-visible {
+            outline: 2px solid var(--ring);
+            outline-offset: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            html, body {
+                scroll-behavior: auto;
+            }
+        }
+
+        @media (prefers-contrast: high) {
+            :root {
+                --border: hsl(0, 0%, 0%);
+                --foreground: hsl(0, 0%, 0%);
+                --background: hsl(0, 0%, 100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="#hero" class="logo">
+                <img src="https://i.imgur.com/Wu48JZ6.png" alt="Elvaria Logo">
+                <span class="hidden-mobile" id="nav-tagline">გაიმარტივე ყოველდღიურობა</span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" data-translate="home">მთავარი</a></li>
+                <li><a href="#product" data-translate="product">პროდუქტი</a></li>
+                <li><a href="#about" data-translate="about">შესახებ</a></li>
+                <li><a href="#gallery" data-translate="gallery">გალერეა</a></li>
+                <li><a href="#contact" data-translate="contact">კონტაქტი</a></li>
+            </ul>
+
+            <div class="language-selector">
+                <div class="lang-button" onclick="toggleLanguageDropdown()">
+                    <span>🌐</span>
+                    <span id="current-lang">🇬🇪 KA</span>
+                    <span>▼</span>
+                </div>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <div class="lang-option" onclick="changeLanguage('ka')">🇬🇪 Georgian (KA)</div>
+                    <div class="lang-option" onclick="changeLanguage('en')">🇺🇸 English (EN)</div>
+                    <div class="lang-option" onclick="changeLanguage('ru')">🇷🇺 Russian (RU)</div>
+                </div>
+            </div>
+
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#hero" data-translate="home" onclick="closeMobileMenu()">მთავარი</a>
+            <a href="#product" data-translate="product" onclick="closeMobileMenu()">პროდუქტი</a>
+            <a href="#about" data-translate="about" onclick="closeMobileMenu()">შესახებ</a>
+            <a href="#gallery" data-translate="gallery" onclick="closeMobileMenu()">გალერეა</a>
+            <a href="#contact" data-translate="contact" onclick="closeMobileMenu()">კონტაქტი</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div class="hero-text">
+                    <h1 data-translate="heroHeadline">გაიმარტივე ყოველდღიურობა</h1>
+                    <p data-translate="heroSubtitle">აღმოაჩინე ბუნებრივი, უვნებელი პროდუქტები, რომლებიც დაიცავენ შენს ოჯახს და გარემოს</p>
+                    <div class="hero-buttons">
+                        <a href="#product" class="btn btn-primary" onclick="trackConversion('hero_shop_now')">
+                            🛒 <span data-translate="shopNow">ყიდვა ახლავე</span>
+                        </a>
+                        <a href="#about" class="btn btn-secondary">
+                            ▶ <span data-translate="learnMore">გაიგე მეტი</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://imgur.com/a/4Z6GeQe" alt="Elvaria premium natural cleaning product" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-header fade-in">
+                <h2 data-translate="aboutTitle">რატომ ავირჩიოთ ელვარია?</h2>
+                <p data-translate="aboutSubtitle">ჩვენ გვჯერა ბუნების ძალისა, რომელიც ქმნის ეფექტურ, უსაფრთხო პროდუქტებს</p>
+            </div>
+
+            <div class="features">
+                <div class="feature fade-in">
+                    <div class="feature-icon eco">🌿</div>
+                    <h3 data-translate="naturalTitle">100% ბუნებრივი</h3>
+                    <p data-translate="naturalDesc">დამზადებულია ორგანული ინგრედიენტებისგან, ზიანის მომტანი ქიმიური ნივთიერებების გარეშე</p>
+                </div>
+                <div class="feature fade-in">
+                    <div class="feature-icon safe">🛡️</div>
+                    <h3 data-translate="safeTitle">უსაფრთხო ოჯახისთვის</h3>
+                    <p data-translate="safeDesc">სრულად ტესტირებული და სერტიფიცირებული ბავშვებისა და შინაური ცხოველებისთვის</p>
+                </div>
+                <div class="feature fade-in">
+                    <div class="feature-icon organic">♻️</div>
+                    <h3 data-translate="ecoTitle">ეკოლოგიურად სუფთა</h3>
+                    <p data-translate="ecoDesc">მდგრადი შეფუთვა და ბიოდეგრადირებადი ფორმულები</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product" class="product">
+        <div class="container">
+            <div class="product-content">
+                <div class="product-image fade-in">
+                    <img src="https://imgur.com/a/4Z6GeQe" alt="Elvaria premium natural cleaning product in elegant home setting" loading="lazy">
+                </div>
+                
+                <div class="product-details fade-in">
+                    <h2 data-translate="productTitle">პრემიუმ ბუნებრივი მრავალმიზნობრივი საწმენდი</h2>
+                    
+                    <ul class="features-list">
+                        <li><span class="checkmark">✓</span> <span data-translate="feature1">მცენარეული ფორმულა, რომელიც ეფექტურად ებრძვის ცხიმს და ჭუჭყს</span></li>
+                        <li><span class="checkmark">✓</span> <span data-translate="feature2">უსაფრთხო ბავშვებისა და შინაური ცხოველებისთვის</span></li>
+                        <li><span class="checkmark">✓</span> <span data-translate="feature3">ბიოდეგრადირებადი და ცრუელობის გარეშე დამზადებული</span></li>
+                        <li><span class="checkmark">✓</span> <span data-translate="feature4">სუფთა ციტრუსის სუნი ბუნებრივი ეთერზეთებისგან</span></li>
+                    </ul>
+
+                    <div class="usage-steps">
+                        <h3 data-translate="howToUse">როგორ გამოვიყენოთ</h3>
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div>
+                                <h4 data-translate="step1Title">შეასხურე და დაელოდე</h4>
+                                <p data-translate="step1Desc">შეასხურე ზედაპირზე და დაელოდე 30 წამს</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div>
+                                <h4 data-translate="step2Title">წაშალე</h4>
+                                <p data-translate="step2Desc">გამოიყენე სუფთა ქსოვილი ან ქაღალდის პირსახოცი</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div>
+                                <h4 data-translate="step3Title">ისიამოვნე შედეგით</h4>
+                                <p data-translate="step3Desc">იხილე თქვენი გაბრწყინვებული ზედაპირები</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing">
+                        <div class="price-info">
+                            <span class="current-price">$29.99</span>
+                            <span class="original-price">$39.99</span>
+                            <span class="discount-badge">25% OFF</span>
+                        </div>
+                        
+                        <div class="product-buttons">
+                            <button class="btn btn-primary" onclick="trackConversion('add_to_cart')">
+                                🛒 <span data-translate="addToCart">კალათაში დამატება</span>
+                            </button>
+                            <button class="btn btn-secondary" onclick="trackConversion('subscribe')">
+                                🔄 <span data-translate="subscribe">გამოწერა და 20% ისაშვი</span>
+                            </button>
+                        </div>
+                        
+                        <p class="shipping-info">
+                            🚚 <span data-translate="freeShipping">უფასო მიტანა 25 ლარზე მეტ შენაძენზე</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section id="social-proof" class="social-proof">
+        <div class="container">
+            <div class="stats fade-in">
+                <div class="stat">
+                    <div class="stat-value">10,000+</div>
+                    <div data-translate="happyHouseholds">ბედნიერი ოჯახი</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">4.8/5</div>
+                    <div data-translate="customerRating">მომხმარებელთა შეფასება</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">99%</div>
+                    <div data-translate="wouldRecommend">რეკომენდაციის მაჩვენებელი</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">50K+</div>
+                    <div data-translate="productsSold">გაყიდული პროდუქტები</div>
+                </div>
+            </div>
+
+            <div class="testimonials-section">
+                <h2 data-translate="testimonialsTitle">რას ამბობენ ჩვენი მომხმარებლები</h2>
+                
+                <div class="testimonials">
+                    <div class="testimonial fade-in">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Finally found a cleaner that actually works without making my house smell like a chemical factory. My kids can play safely on all surfaces now!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&h=50" alt="Sarah M." class="author-avatar">
+                            <div>
+                                <div><strong>Sarah M.</strong></div>
+                                <div>Mother of 2</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial fade-in">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"I love that I can clean my entire home with one product that's both effective and environmentally responsible. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&h=50" alt="Michael R." class="author-avatar">
+                            <div>
+                                <div><strong>Michael R.</strong></div>
+                                <div>Eco-conscious Consumer</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial fade-in">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"The subscription service is so convenient, and the 20% savings really add up. Plus, my allergies have completely disappeared since switching!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&h=50" alt="Emma L." class="author-avatar">
+                            <div>
+                                <div><strong>Emma L.</strong></div>
+                                <div>Loyal Subscriber</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trust-badges fade-in">
+                <h3>Why Trust Elvaria?</h3>
+                <div class="badges">
+                    <div class="badge">
+                        <div class="badge-icon eco">🌿</div>
+                        <div><strong data-translate="ecoFriendly">ეკოლოგიურად სუფთა</strong></div>
+                        <div>Certified Organic</div>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-icon safe">🛡️</div>
+                        <div><strong data-translate="organicSafe">ორგანული და უსაფრთხო</strong></div>
+                        <div>Child & Pet Safe</div>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-icon organic">👥</div>
+                        <div><strong data-translate="trustedBy">ენდობა 10,000+ ოჯახს</strong></div>
+                        <div>Happy Households</div>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-icon safe">↻</div>
+                        <div><strong data-translate="moneyBack">ფულის დაბრუნების გარანტია</strong></div>
+                        <div>30-Day Guarantee</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="gallery-header fade-in">
+                <h2 data-translate="galleryTitle">იხილე ელვარია მოქმედებაში</h2>
+                <p data-translate="gallerySubtitle">რეალური სახლები, რეალური შედეგები</p>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Gallery images will be loaded here -->
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn btn-secondary" onclick="loadMoreImages()" id="load-more-btn">
+                    + <span data-translate="loadMore">მეტის ნახვა</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-header fade-in">
+                <h2 data-translate="contactTitle">დაგვიკავშირდით</h2>
+                <p data-translate="contactSubtitle">გაქვთ კითხვები ჩვენი პროდუქტების შესახებ? ვიქნებით ბედნიერები თქვენი მოსმენით</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-form fade-in">
+                    <form id="contact-form" onsubmit="submitContactForm(event)">
+                        <div class="form-group">
+                            <label for="name" data-translate="name">სახელი</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-translate="email">ელ. ფოსტა</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-translate="message">შეტყობინება</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            📧 <span data-translate="sendMessage">შეტყობინების გაგზავნა</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info fade-in">
+                    <h3 data-translate="letConnect">მოდით დავუკავშირდეთ ერთმანეთს</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon email">📧</div>
+                        <div>
+                            <div><strong>Email</strong></div>
+                            <div>info@elvaria.shop</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon phone">📞</div>
+                        <div>
+                            <div><strong data-translate="phone">ტელეფონი</strong></div>
+                            <div>+995 558 757 885</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon hours">🕒</div>
+                        <div>
+                            <div><strong data-translate="supportHours">მხარდაჭერის საათები</strong></div>
+                            <div>Mon-Fri 9AM-6PM GMT+4</div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4 data-translate="followUs">გამოგვყევით</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">📘</a>
+                            <a href="#" class="social-icon">📷</a>
+                            <a href="#" class="social-icon">🐦</a>
+                            <a href="#" class="social-icon">📺</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-brand">
+                        <img src="https://i.imgur.com/Wu48JZ6.png" alt="Elvaria Logo">
+                        <span>Elvaria</span>
+                    </div>
+                    <p data-translate="footerTagline" style="margin-bottom: 1.5rem; color: rgba(235, 235, 235, 0.7);">უსაფრთხო, სუფთა სახლების შექმნა ბუნებრივი პროდუქტებით</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">📺</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-translate="products">პროდუქტები</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Multi-Purpose Cleaner</a></li>
+                        <li><a href="#">Kitchen Essentials</a></li>
+                        <li><a href="#">Bathroom Care</a></li>
+                        <li><a href="#">Pet-Safe Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-translate="company">კომპანია</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Elvaria. All rights reserved. | Made with ❤️ for a cleaner world</p>
+                <div style="color: rgba(235, 235, 235, 0.7); font-size: 0.875rem;">
+                    Contact: info@elvaria.shop • +995 558 757 885
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>We use cookies to enhance your experience and analyze site usage. <a href="#" style="color: var(--primary);">Learn more</a></p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="btn btn-outline btn-sm" onclick="rejectCookies()">Essential Only</button>
+                <button class="btn btn-primary btn-sm" onclick="acceptCookies()">Accept All</button>
+                <button class="btn btn-outline btn-sm" onclick="closeCookieBanner()">✕</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="lightbox-image" src="" alt="">
+            <button class="lightbox-btn lightbox-close" onclick="closeLightbox()">✕</button>
+            <button class="lightbox-btn lightbox-prev" onclick="previousImage()">‹</button>
+            <button class="lightbox-btn lightbox-next" onclick="nextImage()">›</button>
+            <div class="lightbox-counter" id="lightbox-counter">1 / 6</div>
+        </div>
+    </div>
+
+    <script>
+        // Translations
+        const translations = {
+            ka: {
+                home: "მთავარი",
+                product: "პროდუქტი",
+                about: "შესახებ",
+                gallery: "გალერეა",
+                contact: "კონტაქტი",
+                heroHeadline: "გაიმარტივე ყოველდღიურობა",
+                heroSubtitle: "აღმოაჩინე ბუნებრივი, უვნებელი პროდუქტები, რომლებიც დაიცავენ შენს ოჯახს და გარემოს",
+                shopNow: "ყიდვა ახლავე",
+                learnMore: "გაიგე მეტი",
+                aboutTitle: "რატომ ავირჩიოთ ელვარია?",
+                aboutSubtitle: "ჩვენ გვჯერა ბუნების ძალისა, რომელიც ქმნის ეფექტურ, უსაფრთხო პროდუქტებს",
+                naturalTitle: "100% ბუნებრივი",
+                naturalDesc: "დამზადებულია ორგანული ინგრედიენტებისგან, ზიანის მომტანი ქიმიური ნივთიერებების გარეშე",
+                safeTitle: "უსაფრთხო ოჯახისთვის",
+                safeDesc: "სრულად ტესტირებული და სერტიფიცირებული ბავშვებისა და შინაური ცხოველებისთვის",
+                ecoTitle: "ეკოლოგიურად სუფთა",
+                ecoDesc: "მდგრადი შეფუთვა და ბიოდეგრადირებადი ფორმულები",
+                productTitle: "პრემიუმ ბუნებრივი მრავალმიზნობრივი საწმენდი",
+                feature1: "მცენარეული ფორმულა, რომელიც ეფექტურად ებრძვის ცხიმს და ჭუჭყს",
+                feature2: "უსაფრთხო ბავშვებისა და შინაური ცხოველებისთვის",
+                feature3: "ბიოდეგრადირებადი და ცრუელობის გარეშე დამზადებული",
+                feature4: "სუფთა ციტრუსის სუნი ბუნებრივი ეთერზეთებისგან",
+                howToUse: "როგორ გამოვიყენოთ",
+                step1Title: "შეასხურე და დაელოდე",
+                step1Desc: "შეასხურე ზედაპირზე და დაელოდე 30 წამს",
+                step2Title: "წაშალე",
+                step2Desc: "გამოიყენე სუფთა ქსოვილი ან ქაღალდის პირსახოცი",
+                step3Title: "ისიამოვნე შედეგით",
+                step3Desc: "იხილე თქვენი გაბრწყინვებული ზედაპირები",
+                addToCart: "კალათაში დამატება",
+                subscribe: "გამოწერა და 20% ისაშვი",
+                freeShipping: "უფასო მიტანა 25 ლარზე მეტ შენაძენზე",
+                happyHouseholds: "ბედნიერი ოჯახი",
+                customerRating: "მომხმარებელთა შეფასება",
+                wouldRecommend: "რეკომენდაციის მაჩვენებელი",
+                productsSold: "გაყიდული პროდუქტები",
+                testimonialsTitle: "რას ამბობენ ჩვენი მომხმარებლები",
+                galleryTitle: "იხილე ელვარია მოქმედებაში",
+                gallerySubtitle: "რეალური სახლები, რეალური შედეგები",
+                loadMore: "მეტის ნახვა",
+                contactTitle: "დაგვიკავშირდით",
+                contactSubtitle: "გაქვთ კითხვები ჩვენი პროდუქტების შესახებ? ვიქნებით ბედნიერები თქვენი მოსმენით",
+                name: "სახელი",
+                email: "ელ. ფოსტა",
+                message: "შეტყობინება",
+                sendMessage: "შეტყობინების გაგზავნა",
+                letConnect: "მოდით დავუკავშირდეთ ერთმანეთს",
+                phone: "ტელეფონი",
+                supportHours: "მხარდაჭერის საათები",
+                followUs: "გამოგვყევით",
+                footerTagline: "უსაფრთხო, სუფთა სახლების შექმნა ბუნებრივი პროდუქტებით",
+                products: "პროდუქტები",
+                company: "კომპანია",
+                ecoFriendly: "ეკოლოგიურად სუფთა",
+                organicSafe: "ორგანული და უსაფრთხო",
+                trustedBy: "ენდობა 10,000+ ოჯახს",
+                moneyBack: "ფულის დაბრუნების გარანტია"
+            },
+            en: {
+                home: "Home",
+                product: "Product",
+                about: "About",
+                gallery: "Gallery",
+                contact: "Contact",
+                heroHeadline: "Elevate Everyday Living",
+                heroSubtitle: "Discover eco-friendly, organic products that keep your family safe while protecting the environment",
+                shopNow: "Shop Now",
+                learnMore: "Learn More",
+                aboutTitle: "Why Choose Elvaria?",
+                aboutSubtitle: "We believe in the power of nature to create effective, safe products that protect your family and our planet",
+                naturalTitle: "100% Natural",
+                naturalDesc: "Made from carefully selected organic ingredients with no harmful chemicals or artificial additives",
+                safeTitle: "Family Safe",
+                safeDesc: "Thoroughly tested and certified safe for children, pets, and everyone in your household",
+                ecoTitle: "Eco-Friendly",
+                ecoDesc: "Sustainable packaging and biodegradable formulas that protect our environment",
+                productTitle: "Premium Natural Multi-Purpose Cleaner",
+                feature1: "Plant-based formula that cuts through grease and grime effectively",
+                feature2: "Safe around children and pets - no toxic fumes or residues",
+                feature3: "Biodegradable and cruelty-free with recyclable packaging",
+                feature4: "Fresh citrus scent from natural essential oils",
+                howToUse: "How to Use",
+                step1Title: "Spray & Wait",
+                step1Desc: "Apply to surface and let sit for 30 seconds for optimal cleaning power",
+                step2Title: "Wipe Clean",
+                step2Desc: "Use a clean cloth or paper towel to wipe away dirt and grime",
+                step3Title: "Enjoy Results",
+                step3Desc: "Admire your sparkling clean surfaces with no harsh chemical residue",
+                addToCart: "Add to Cart",
+                subscribe: "Subscribe & Save 20%",
+                freeShipping: "Free shipping on orders over $25",
+                happyHouseholds: "Happy Households",
+                customerRating: "Customer Rating",
+                wouldRecommend: "Would Recommend",
+                productsSold: "Products Sold",
+                testimonialsTitle: "What Our Customers Say",
+                galleryTitle: "See Elvaria in Action",
+                gallerySubtitle: "Real homes, real results. Discover how our customers use Elvaria products",
+                loadMore: "Load More",
+                contactTitle: "Get In Touch",
+                contactSubtitle: "Have questions about our products? We'd love to hear from you",
+                name: "Name",
+                email: "Email",
+                message: "Message",
+                sendMessage: "Send Message",
+                letConnect: "Let's Connect",
+                phone: "Phone",
+                supportHours: "Support Hours",
+                followUs: "Follow Us",
+                footerTagline: "Creating safer, cleaner homes with natural products you can trust",
+                products: "Products",
+                company: "Company",
+                ecoFriendly: "Eco-Friendly",
+                organicSafe: "Organic & Safe",
+                trustedBy: "Trusted by 10k+",
+                moneyBack: "Money-back Guarantee"
+            },
+            ru: {
+                home: "Главная",
+                product: "Продукт",
+                about: "О нас",
+                gallery: "Галерея",
+                contact: "Контакты",
+                heroHeadline: "Улучшите повседневную жизнь",
+                heroSubtitle: "Откройте для себя экологичные, органические продукты, которые защищают вашу семью и окружающую среду",
+                shopNow: "Купить сейчас",
+                learnMore: "Узнать больше",
+                aboutTitle: "Почему выбирают Elvaria?",
+                aboutSubtitle: "Мы верим в силу природы создавать эффективные, безопасные продукты",
+                naturalTitle: "100% Натуральный",
+                naturalDesc: "Изготовлен из тщательно отобранных органических ингредиентов",
+                safeTitle: "Безопасно для семьи",
+                safeDesc: "Тщательно протестировано и сертифицировано для детей и домашних животных",
+                ecoTitle: "Экологичный",
+                ecoDesc: "Устойчивая упаковка и биоразлагаемые формулы",
+                productTitle: "Премиальное натуральное универсальное чистящее средство",
+                feature1: "Растительная формула, эффективно удаляющая жир и грязь",
+                feature2: "Безопасно для детей и домашних животных",
+                feature3: "Биоразлагаемый и не тестируется на животных",
+                feature4: "Свежий цитрусовый аромат натуральных эфирных масел",
+                howToUse: "Как использовать",
+                step1Title: "Распылите и подождите",
+                step1Desc: "Нанесите на поверхность и подождите 30 секунд",
+                step2Title: "Протрите",
+                step2Desc: "Используйте чистую ткань или бумажное полотенце",
+                step3Title: "Наслаждайтесь результатом",
+                step3Desc: "Любуйтесь сверкающими чистыми поверхностями",
+                addToCart: "В корзину",
+                subscribe: "Подписка со скидкой 20%",
+                freeShipping: "Бесплатная доставка при заказе от $25",
+                happyHouseholds: "Довольных семей",
+                customerRating: "Рейтинг клиентов",
+                wouldRecommend: "Рекомендуют",
+                productsSold: "Продано товаров",
+                testimonialsTitle: "Что говорят наши клиенты",
+                galleryTitle: "Elvaria в действии",
+                gallerySubtitle: "Реальные дома, реальные результаты",
+                loadMore: "Загрузить больше",
+                contactTitle: "Свяжитесь с нами",
+                contactSubtitle: "Есть вопросы о наших продуктах? Мы будем рады услышать от вас",
+                name: "Имя",
+                email: "Email",
+                message: "Сообщение",
+                sendMessage: "Отправить сообщение",
+                letConnect: "Давайте свяжемся",
+                phone: "Телефон",
+                supportHours: "Часы поддержки",
+                followUs: "Подписывайтесь",
+                footerTagline: "Создание более безопасных, чистых домов с натуральными продуктами",
+                products: "Продукты",
+                company: "Компания",
+                ecoFriendly: "Экологичный",
+                organicSafe: "Органический и безопасный",
+                trustedBy: "Доверяют 10,000+",
+                moneyBack: "Гарантия возврата денег"
+            }
+        };
+
+        // Gallery images
+        const galleryImages = [
+            "https://cdn.getyourguide.com/image/format=auto,fit=contain,gravity=auto,quality=60,width=1440,height=650,dpr=1/tour_img/6332ff6c85214.jpeg",
+            "https://cdn.getyourguide.com/image/format=auto,fit=contain,gravity=auto,quality=60,width=1440,height=650,dpr=1/tour_img/6332ffa94abe9.jpeg",
+            "https://cdn.getyourguide.com/image/format=auto,fit=contain,gravity=auto,quality=60,width=1440,height=650,dpr=1/tour_img/46336f09c554b4ce45c8d35815138bd03c1584086dbfaeea2bf49f06c508f6aa.jpeg",
+            "https://cdn.getyourguide.com/image/format=auto,fit=contain,gravity=auto,quality=60,width=1440,height=650,dpr=1/tour_img/6332ff5d4b4ed.jpeg",
+            "https://cdn.getyourguide.com/image/format=auto,fit=contain,gravity=auto,quality=60,width=1440,height=650,dpr=1/tour_img/6332ff94d955e.jpeg",
+            "https://cdn.getyourguide.com/image/format=auto,fit=contain,gravity=auto,quality=60,width=1440,height=650,dpr=1/tour_img/6332ffde4ee32.jpeg"
+        ];
+
+        // Global variables
+        let currentLanguage = 'ka';
+        let displayedImages = 3;
+        let currentLightboxIndex = 0;
+
+        // Language functionality
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('language', lang);
+            
+            // Update current language display
+            const flags = { ka: '🇬🇪 KA', en: '🇺🇸 EN', ru: '🇷🇺 RU' };
+            document.getElementById('current-lang').textContent = flags[lang];
+            
+            // Update navbar tagline
+            document.getElementById('nav-tagline').textContent = translations[lang].heroHeadline;
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update document language
+            document.documentElement.lang = lang;
+            
+            // Update URL
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', lang);
+            window.history.pushState({}, '', url.toString());
+            
+            // Close dropdown
+            document.getElementById('lang-dropdown').classList.remove('show');
+        }
+
+        function toggleLanguageDropdown() {
+            document.getElementById('lang-dropdown').classList.toggle('show');
+        }
+
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('show');
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobile-menu').classList.remove('show');
+        }
+
+        // Gallery functionality
+        function loadGallery() {
+            const grid = document.getElementById('gallery-grid');
+            const imagesToShow = galleryImages.slice(0, displayedImages);
+            
+            grid.innerHTML = '';
+            imagesToShow.forEach((image, index) => {
+                const item = document.createElement('div');
+                item.className = 'gallery-item fade-in';
+                item.innerHTML = `
+                    <img src="${image}" alt="Gallery Image ${index + 1}" loading="lazy">
+                    <div class="gallery-overlay">
+                        <button class="overlay-button" onclick="openLightbox(${index})">🔍</button>
+                        <button class="overlay-button" onclick="copyImageLink('${image}')">🔗</button>
+                    </div>
+                `;
+                grid.appendChild(item);
+            });
+            
+            // Show/hide load more button
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            if (displayedImages >= galleryImages.length) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'inline-flex';
+            }
+        }
+
+        function loadMoreImages() {
+            displayedImages = Math.min(displayedImages + 3, galleryImages.length);
+            loadGallery();
+        }
+
+        function copyImageLink(url) {
+            navigator.clipboard.writeText(url).then(() => {
+                alert('Image link copied to clipboard!');
+            });
+        }
+
+        // Lightbox functionality
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            updateLightbox();
+            document.getElementById('lightbox').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        function updateLightbox() {
+            const image = document.getElementById('lightbox-image');
+            const counter = document.getElementById('lightbox-counter');
+            
+            image.src = galleryImages[currentLightboxIndex];
+            image.alt = `Gallery Image ${currentLightboxIndex + 1}`;
+            counter.textContent = `${currentLightboxIndex + 1} / ${galleryImages.length}`;
+        }
+
+        function previousImage() {
+            currentLightboxIndex = currentLightboxIndex > 0 ? currentLightboxIndex - 1 : galleryImages.length - 1;
+            updateLightbox();
+        }
+
+        function nextImage() {
+            currentLightboxIndex = currentLightboxIndex < galleryImages.length - 1 ? currentLightboxIndex + 1 : 0;
+            updateLightbox();
+        }
+
+        // Contact form functionality
+        function submitContactForm(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                message: formData.get('message'),
+                language: currentLanguage
+            };
+            
+            // Simulate form submission
+            alert('Message sent successfully! We\'ll get back to you within 24 hours.');
+            event.target.reset();
+        }
+
+        // Cookie banner functionality
+        function showCookieBanner() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                setTimeout(() => {
+                    document.getElementById('cookie-banner').classList.add('show');
+                }, 2000);
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            closeCookieBanner();
+            console.log('Analytics tracking enabled');
+        }
+
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'essential');
+            closeCookieBanner();
+            console.log('Essential cookies only');
+        }
+
+        function closeCookieBanner() {
+            document.getElementById('cookie-banner').classList.remove('show');
+        }
+
+        // Conversion tracking
+        function trackConversion(event) {
+            console.log(`Conversion event fired: ${event}`);
+            // TODO: Implement actual tracking
+        }
+
+        // Scroll effects
+        function handleScroll() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+
+        // Fade-in animation
+        function handleFadeIn() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        function smoothScrollTo(target) {
+            const element = document.querySelector(target);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Initialize everything
+        function init() {
+            // Check for language in URL or localStorage
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            const storedLang = localStorage.getItem('language');
+            
+            if (urlLang && translations[urlLang]) {
+                changeLanguage(urlLang);
+            } else if (storedLang && translations[storedLang]) {
+                changeLanguage(storedLang);
+            }
+            
+            // Load gallery
+            loadGallery();
+            
+            // Show cookie banner
+            showCookieBanner();
+            
+            // Add event listeners
+            window.addEventListener('scroll', handleScroll);
+            window.addEventListener('scroll', handleFadeIn);
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', (event) => {
+                if (!event.target.closest('.language-selector')) {
+                    document.getElementById('lang-dropdown').classList.remove('show');
+                }
+            });
+            
+            // Handle anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = this.getAttribute('href');
+                    smoothScrollTo(target);
+                });
+            });
+            
+            // Keyboard navigation for lightbox
+            document.addEventListener('keydown', (e) => {
+                const lightbox = document.getElementById('lightbox');
+                if (lightbox.classList.contains('show')) {
+                    switch (e.key) {
+                        case 'Escape':
+                            closeLightbox();
+                            break;
+                        case 'ArrowLeft':
+                            previousImage();
+                            break;
+                        case 'ArrowRight':
+                            nextImage();
+                            break;
+                    }
+                }
+            });
+            
+            // Initial fade-in check
+            handleFadeIn();
+        }
+
+        // Start everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
